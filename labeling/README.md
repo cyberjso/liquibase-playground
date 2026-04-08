@@ -44,12 +44,6 @@ Start PostgreSQL:
 make start
 ```
 
-Run all migrations (no label filter — every changeset applies):
-
-```bash
-make migrate
-```
-
 Run only changesets matching a specific label:
 
 ```bash
