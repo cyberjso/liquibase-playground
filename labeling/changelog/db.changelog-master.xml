@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd">
+
+    <changeSet id="001-create-schema-and-tables" author="copilot">
+        <sqlFile path="sql/01_create_schema_and_tables.sql" relativeToChangelogFile="true" />
+    </changeSet>
+
+    <changeSet id="002-create-sequences" author="Jackson" labels="release-1">
+        <sqlFile path="sql/02_create_sequences.sql" relativeToChangelogFile="true" />
+    </changeSet>
+
+    <changeSet id="003-create-indexes" author="Jackson" labels="release-1">
+        <sqlFile path="sql/03_create_indexes.sql" relativeToChangelogFile="true" />
+    </changeSet>
+
+    <changeSet id="004-create-routines" author="Jackson" runOnChange="true">
+        <sqlFile path="routines/04_create_function.sql" relativeToChangelogFile="true" />
+        <sqlFile path="routines/05_create_procedure.sql" relativeToChangelogFile="true" />
+    </changeSet>
+
+    <changeSet id="006-seed-data" author="Jackson" labels="release-1">
+        <sqlFile path="sql/06_seed_data.sql" relativeToChangelogFile="true" />
+    </changeSet>
+
+    <changeSet id="007-create-release-2-table" author="Jackson" labels="release-2">
+        <sqlFile path="sql/07_create_release_2_table.sql" relativeToChangelogFile="true" />
+    </changeSet>
+
+    <changeSet id="008-create-unlabeled-table" author="Jackson">
+        <sqlFile path="sql/08_create_unlabeled_table.sql" relativeToChangelogFile="true" />
+    </changeSet>
+
+</databaseChangeLog>
